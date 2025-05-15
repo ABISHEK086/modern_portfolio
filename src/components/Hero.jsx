@@ -77,7 +77,7 @@ export default function Hero() {
             <div className="flex gap-4">
               {[
                 { icon: <FiGithub />, url: "https://github.com/ABISHEK086" },
-                { icon: <FiLinkedin />, url: "www.linkedin.com/in/abishek-antony-a86673ap" },
+                { icon: <FiLinkedin />, url: "https://www.linkedin.com/in/abishek-antony-a86673ap" },
                 { icon: <FiTwitter />, url: "https://x.com/Abishek098210" }
               ].map((social, i) => (
                 <motion.a 
