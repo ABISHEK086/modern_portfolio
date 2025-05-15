@@ -35,7 +35,7 @@ export default function Header({ darkMode, setDarkMode }) {
   const socialLinks = [
     { icon: <FaGithub size={18} />, url: "https://github.com/ABISHEK086" },
     { icon: <FaTwitter size={18} />, url: "https://x.com/Abishek098210" },
-    { icon: <FaLinkedin size={18} />, url: "www.linkedin.com/in/abishek-antony-a86673ap" },
+    { icon: <FaLinkedin size={18} />, url: "https://www.linkedin.com/in/abishek-antony-a86673ap" },
   ];
 
   // Animation variants
