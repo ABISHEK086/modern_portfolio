@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 59 130 246;
+    --color-primary-light: 96 165 250;
+    --color-primary-dark: 37 99 235;
+    --color-secondary: 124 58 237;
+    --color-secondary-light: 139 92 246;
+    --color-secondary-dark: 109 40 217;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-medium 
+           hover:bg-primary-dark transition-all duration-200
+           dark:bg-primary-dark dark:hover:bg-primary;
+  }
+  
+  .btn-secondary {
+    @apply border border-primary text-primary px-6 py-3 rounded-lg font-medium 
+           hover:bg-primary/10 transition-all duration-200
+           dark:border-secondary dark:text-secondary dark:hover:bg-secondary/10;
+  }
+
+  .nav-link {
+    @apply hover:text-primary transition-colors duration-200
+           dark:hover:text-secondary;
+  }
+}
+
+@layer utilities {
+  html {
+    scroll-behavior: smooth;
+    @apply bg-light-bg text-light-text;
+  }
+
+  body.dark {
+    @apply bg-dark-bg text-dark-text;
+  }
+
+  body {
+    @apply transition-colors duration-200;
+  }
+  
+  .header-style {
+    @apply bg-white/80 backdrop-blur-md shadow-sm
+           dark:bg-gray-900/80 dark:shadow-gray-800/20;
+  }
+}
