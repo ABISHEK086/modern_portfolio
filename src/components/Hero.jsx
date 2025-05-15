@@ -12,7 +12,7 @@ export default function Hero() {
 
   // Function to handle CV download
   const handleDownloadCV = () => {
-    window.open('https://drive.google.com/your-cv-link', '_blank') // Replace with your actual Google Drive link
+    window.open('https://drive.google.com/file/d/1Br2kxpZnPH5hd9B9hU0WciorY1zQtCgP/view?usp=sharing', '_blank') // Replace with your actual Google Drive link
   }
 
   return (
