@@ -32,24 +32,10 @@ export default function About() {
             <div>
               <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Who I Am</h3>
               <p className="mb-4 text-gray-600 dark:text-gray-300">
-                Developer specializing in modern web technologies with expertise in React, JavaScript, and responsive design. I create high-performance applications that combine aesthetic appeal with technical excellence.
+                Results-driven Frontend Developer with hands-on experience in building modern, responsive web applications using React.js, JavaScript, and Tailwind CSS. Passionate about crafting seamless user experiences through clean, efficient code and innovative design. Adept at collaborating in agile environments to deliver scalable solutions. Eager to leverage my skills in full-stack development and problem-solving to contribute to impactful projects while continuously expanding my technical expertise.
               </p>
               
-              <h4 className="font-semibold mt-6 mb-2 text-gray-800 dark:text-gray-200">Notable Projects:</h4>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>
-                  • <span className="font-medium">Modern Dynamic Business Page</span> - Built with React, Tailwind CSS and Framer Motion, featuring engaging animations and responsive design.
-                </li>
-                <li>
-                  • <span className="font-medium">Next-Gen Website Builder Landing Page</span> - Interactive landing page with dynamic animations and modern UI components.
-                </li>
-                <li>
-                  • <span className="font-medium">Creative Agency Page</span> - Startup-focused digital solution built with HTML, CSS, JavaScript and Bootstrap.
-                </li>
-                <li>
-                  • <span className="font-medium">Shopping Cart System</span> - Comprehensive order management system developed with Java, SQL and web technologies.
-                </li>
-              </ul>
+              
             </div>
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">My Toolkit</h3>
