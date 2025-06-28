@@ -1,15 +1,20 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { FaReact, FaPython, FaJs, FaHtml5, FaCss3Alt, FaWordpress, FaBootstrap } from 'react-icons/fa';
+import { SiTailwindcss, SiMysql, SiDjango } from 'react-icons/si';
 
 export default function About() {
-  const skills = [
-    { name: 'React', level: 82 },
-    { name: 'Python', level: 79 },
-    { name: 'Sql', level: 85 },
-    { name: 'JavaScript', level: 85 },
-    { name: 'Tailwind CSS', level: 80 },
-    { name: 'UI/UX Design', level: 75 },
-    
-  ]
+  const tools = [
+    { name: 'Python', icon: <FaPython size={32} /> },
+    { name: 'Django', icon: <SiDjango size={32} /> },
+    { name: 'SQL', icon: <SiMysql size={32} /> },
+    { name: 'React', icon: <FaReact size={32} /> },
+    { name: 'JavaScript', icon: <FaJs size={32} /> },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss size={32} /> },
+    { name: 'Bootstrap', icon: <FaBootstrap size={32} /> },
+    { name: 'HTML5', icon: <FaHtml5 size={32} /> },
+    { name: 'CSS3', icon: <FaCss3Alt size={32} /> },
+    { name: 'WordPress', icon: <FaWordpress size={32} /> },
+  ];
 
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-200">
@@ -27,33 +32,46 @@ export default function About() {
             <div>
               <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Who I Am</h3>
               <p className="mb-4 text-gray-600 dark:text-gray-300">
-                Web Developer specializing in React, JavaScript, and modern CSS (Tailwind, Framer Motion), with a knack for transforming ideas into fast, responsive, and visually compelling web applications. I build intuitive interfaces—like e-commerce systems and interactive landing pages—that marry clean code with engaging user experiences. Passionate about leveraging tools like Figma and Firebase to solve problems efficiently and elevate digital products.
+                Developer specializing in modern web technologies with expertise in React, JavaScript, and responsive design. I create high-performance applications that combine aesthetic appeal with technical excellence.
               </p>
-              <p className="text-gray-600 dark:text-gray-300">
-                I love creating beautiful, functional interfaces that provide
-                great user experiences.
-              </p>
+              
+              <h4 className="font-semibold mt-6 mb-2 text-gray-800 dark:text-gray-200">Notable Projects:</h4>
+              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
+                <li>
+                  • <span className="font-medium">Modern Dynamic Business Page</span> - Built with React, Tailwind CSS and Framer Motion, featuring engaging animations and responsive design.
+                </li>
+                <li>
+                  • <span className="font-medium">Next-Gen Website Builder Landing Page</span> - Interactive landing page with dynamic animations and modern UI components.
+                </li>
+                <li>
+                  • <span className="font-medium">Creative Agency Page</span> - Startup-focused digital solution built with HTML, CSS, JavaScript and Bootstrap.
+                </li>
+                <li>
+                  • <span className="font-medium">Shopping Cart System</span> - Comprehensive order management system developed with Java, SQL and web technologies.
+                </li>
+              </ul>
             </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">My Skills</h3>
-              {skills.map((skill, i) => (
-                <div key={i}>
-                  <div className="flex justify-between mb-1 text-gray-700 dark:text-gray-300">
-                    <span>{skill.name}</span>
-                    <span>{skill.level}%</span>
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">My Toolkit</h3>
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+                {tools.map((tool, i) => (
+                  <div 
+                    key={i}
+                    className="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div className="text-gray-700 dark:text-gray-200 mb-2">
+                      {tool.icon}
+                    </div>
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      {tool.name}
+                    </span>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div 
-                      className="bg-primary dark:bg-secondary h-2 rounded-full" 
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
