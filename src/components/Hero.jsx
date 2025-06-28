@@ -10,9 +10,8 @@ export default function Hero() {
     }
   }
 
-  // Function to handle CV download
   const handleDownloadCV = () => {
-    window.open('https://drive.google.com/file/d/1mUndKT619hLuq8c5pHfZSmknJ4TBgR3H/view?usp=sharing', '_blank') // Replace with your actual Google Drive link
+    window.open('https://drive.google.com/file/d/1O1hJwqwFNZG6n2RXoxn5XBN1Horh-Cur/view?usp=sharing', '_blank')
   }
 
   return (
@@ -40,13 +39,15 @@ export default function Hero() {
               className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-6"
               whileHover={{ scale: 1.01 }}
             >
-              Web Developer
+              Frontend Alchemist
             </motion.h2>
             <motion.p 
               className="text-lg mb-8 text-gray-700 dark:text-gray-200"
               whileHover={{ scale: 1.01 }}
             >
-              crafting high-performance apps with React, JavaScript & modern CSS, blending clean code with intuitive UX
+              I transform React components into seamless digital experiences where 
+              performance meets pixel-perfect design. My code doesn't just work - 
+              it sings.
             </motion.p>
             <div className="flex flex-wrap gap-4 mb-12">
               <motion.button 
@@ -55,7 +56,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                View My Work <FiArrowRight />
+                See My Magic <FiArrowRight />
               </motion.button>
               <motion.button 
                 onClick={() => scrollToSection('contact')}
@@ -63,7 +64,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Contact Me
+                Let's Create
               </motion.button>
               <motion.button 
                 onClick={handleDownloadCV}
@@ -71,18 +72,19 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Download CV <FiDownload />
+                My Spellbook <FiDownload />
               </motion.button>
             </div>
             <div className="flex gap-4">
               {[
-                { icon: <FiGithub />, url: "https://github.com/ABISHEK086" },
-                { icon: <FiLinkedin />, url: "https://www.linkedin.com/in/abishek-antony-a86673ap" },
-                { icon: <FiTwitter />, url: "https://x.com/Abishek098210" }
+                { icon: <FiGithub />, url: "https://github.com/ABISHEK086", name: "GitHub" },
+                { icon: <FiLinkedin />, url: "https://www.linkedin.com/in/abishek-antony-a86673ap", name: "LinkedIn" },
+                { icon: <FiTwitter />, url: "https://x.com/Abishek098210", name: "Twitter" }
               ].map((social, i) => (
                 <motion.a 
                   key={i}
                   href={social.url}
+                  aria-label={social.name}
                   className="text-2xl text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-secondary transition-colors"
                   whileHover={{ y: -5, scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -110,7 +112,7 @@ export default function Hero() {
               />
               <motion.img
                 src={profileImage}
-                alt="Profile"
+                alt="Abi's Profile"
                 className="relative z-10 w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-xl animate-float"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
