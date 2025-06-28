@@ -19,7 +19,7 @@ export default function Experience() {
     {
       role: "Developer and Technology Job Simulation",
       company: "Accenture",
-      duration: "Jun 2024",
+      duration: "Aug 2024",
       description: [
         "Completed Accenture's Developer & Technology Job Simulation, gaining hands-on experience in web development, code debugging, and technical assessments.",
         "Developed and optimized functional applications while following industry best practices in Agile workflows and version control.",
@@ -43,7 +43,7 @@ export default function Experience() {
     {
       role: "Software Engineering",
       company: "JPMorgan & Co",
-      duration: "Aug 2024",
+      duration: "Oct 2024",
       description: [
         "Completed JPMorgan Chase's Software Engineering Simulation, interfacing with real-time stock price data feeds and implementing financial data visualization tools.",
         "Leveraged proprietary frameworks to process market data and optimize trader dashboards.",
@@ -55,7 +55,7 @@ export default function Experience() {
     {
       role: "Power BI",
       company: "PWC",
-      duration: "Aug 2024",
+      duration: "Jul 2024",
       description: [
         "Analyzed key business metrics including call center trends, customer retention, and diversity & inclusion using Power BI.",
         "Transformed raw data into actionable insights through interactive dashboards and visualizations.",
@@ -79,7 +79,7 @@ export default function Experience() {
     {
       role: "Data Visualization Simulation",
       company: "TATA",
-      duration: "Aug 2024",
+      duration: "Sep 2024",
       description: [
         "Translated business data into actionable insights through strategic visualization.",
         "Designed and optimized dashboards to communicate complex analysis effectively.",
