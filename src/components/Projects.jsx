@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 
 const projects = [
+
+  
   {
     title: "Modern Dynamic Business Page",
     description: "Crafted a visually appealing and high-performance business page with engaginganimations and seamless responsiveness, ensuring an immersive user experience.",
@@ -28,6 +30,20 @@ const projects = [
     tags: ["Java", "SQL", "HTML","Css","Javascript"],
     image: "/p.jpg",
     githubUrl: "https://github.com/ABISHEK086/ShoppingCart"
+  },
+  {
+    title: "PractiScore",
+    description: "A mobile application designed to manage and track lab practical marks for students.Faculty can input marks based on categories like observation, verification, and viva.The app features role-based access, real-time updates, and centralized data storage using Firebase.Students can view performance reports and receive feedback instantly on their assessments.Crafted a visually appealing and high-performance business page with engaginganimations and seamless responsiveness, ensuring an immersive user experience.",
+    tags: ["Java", "XML", "Firebase"],
+    image: "/p5.jpg",
+    githubUrl: "https://github.com/ABISHEK086/PractiScore"
+  },
+  {
+    title: "QueriesGen",
+    description: "A mobile app to track lab practical marks and generate question papers using the built-in tool for faculty and students.Includes features like subject-wise question paper selection, role-based access, and offline PDF viewing for enhanced usability. ",
+    tags: ["Java", "XML" ,"Firebase"],
+    image: "/p6.jfif",
+    githubUrl: "https://github.com/ABISHEK086/QueriesGen"
   }
 ]
 
