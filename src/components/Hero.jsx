@@ -39,7 +39,7 @@ export default function Hero() {
               className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-6"
               whileHover={{ scale: 1.01 }}
             >
-              Frontend Alchemist
+              The Stack Architect
             </motion.h2>
             <motion.p 
               className="text-lg mb-8 text-gray-700 dark:text-gray-200"
