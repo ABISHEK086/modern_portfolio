@@ -8,10 +8,10 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault()
     emailjs.sendForm(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
+      'service_qwvvi0i',
+      'template_595z2ti',
       form.current,
-      'YOUR_PUBLIC_KEY'
+      '9lEx7DnoagwgoJo6A'
     )
     .then(() => alert('Message sent!'))
     .catch(() => alert('Failed to send message'))
