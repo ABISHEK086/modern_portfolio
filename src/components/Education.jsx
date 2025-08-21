@@ -10,7 +10,7 @@ export default function Education() {
       score: 'CGPA: 8.77'
     },
     { 
-      institution: 'St James Higher Secondary School-Tricy', 
+      institution: 'St James Higher Secondary School-Trichy', 
       degree: 'HSC',
       field: 'Bio-Maths',
       year: '2022',
@@ -74,4 +74,5 @@ export default function Education() {
       </div>
     </section>
   )
+
 }
