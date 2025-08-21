@@ -17,7 +17,7 @@ export default function Education() {
       score: '74%'
     },
     { 
-      institution: 'John Brito Higher Secondary School', 
+      institution: 'John Brito Higher Secondary School-Krishnagiri', 
       degree: 'SSLC',
       field: 'General Education',
       year: '2020',
@@ -76,3 +76,4 @@ export default function Education() {
   )
 
 }
+
