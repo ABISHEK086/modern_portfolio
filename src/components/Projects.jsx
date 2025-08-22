@@ -7,7 +7,7 @@ const projects = [
     description: "Built a predictive model to classify student performance using academic and demographic data, comparing multiple classifiers and providing graph visualizations with an interactive CLI.",
     tags: ["Python", "Scikit-learn", "Matplotlib","Seaborn","Pandas","NumPy"],
     image: "/p7.jfif",
-    githubUrl: "https://github.com/ABISHEK086/Student-Performance-Prediction-ML/"
+    githubUrl: "https://student-performance-prediction-ml-enjugumqrmvssvnarrquav.streamlit.app/"
   },
 
 
