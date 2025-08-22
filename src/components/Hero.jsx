@@ -11,7 +11,7 @@ export default function Hero() {
   }
 
   const handleDownloadCV = () => {
-    window.open('https://drive.google.com/file/d/1nrJMERZNuGmznnxzmjN_LSxFahRkXq1Z/view?usp=sharing', '_blank')
+    window.open('https://drive.google.com/file/d/14nn0qNd9ITvYtteb0UIIoSLBogKRzYQN/view?usp=sharing', '_blank')
   }
 
   return (
