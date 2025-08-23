@@ -1,4 +1,4 @@
-#React + Vite Project  
+React + Vite Project  
 
 This is a modern web application built with React and Vite, styled using Tailwind CSS for a fast and responsive UI.  
 
