@@ -11,7 +11,7 @@ export default function Hero() {
   }
 
   const handleDownloadCV = () => {
-    window.open('https://student-performance-prediction-ml-enjugumqrmvssvnarrquav.streamlit.app/', '_blank')
+    window.open('https://drive.google.com/file/d/1W5GUtFYUULAWhNd4XvZ60mGorGvs5tt1/view?usp=sharing/', '_blank')
   }
 
   return (
