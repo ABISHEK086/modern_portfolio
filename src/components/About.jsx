@@ -10,16 +10,17 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss, SiMysql, SiDjango, SiFlutter } from "react-icons/si";
 
-// Floating Animation
-const floating = {
-  initial: { y: 0, rotate: 0 },
-  animate: {
-    y: [0, -10, 0],
-    rotate: [0, 2, -2, 0],
+// Animation Variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const containerStagger = {
+  hidden: {},
+  visible: {
     transition: {
-      duration: 4,
-      repeat: Infinity,
-      ease: "easeInOut",
+      staggerChildren: 0.15,
     },
   },
 };
@@ -55,28 +56,23 @@ export default function About() {
     >
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-5xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={containerStagger}
+          className="max-w-4xl mx-auto"
         >
           {/* Heading */}
           <motion.h2
+            variants={fadeInUp}
             className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white"
-            whileInView={{ scale: [0.9, 1], opacity: [0, 1] }}
-            transition={{ duration: 0.8 }}
           >
             About <span className="text-primary dark:text-secondary">Me</span>
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left - Text */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <motion.div variants={fadeInUp}>
               <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
                 My Expertise
               </h3>
@@ -94,20 +90,22 @@ export default function About() {
               </p>
             </motion.div>
 
-            {/* Right - Toolkit with Floating Animation */}
-            <div className="space-y-6">
+            {/* Right - Toolkit */}
+            <motion.div variants={fadeInUp} className="space-y-6">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
                 My Toolkit
               </h3>
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-6">
+
+              <motion.div
+                variants={containerStagger}
+                className="grid grid-cols-3 sm:grid-cols-4 gap-4"
+              >
                 {tools.map((tool, i) => (
                   <motion.div
                     key={i}
-                    variants={floating}
-                    initial="initial"
-                    animate="animate"
-                    whileHover={{ scale: 1.15, rotateY: 10 }}
-                    className="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-2xl shadow-md hover:shadow-xl transition-all"
+                    variants={fadeInUp}
+                    whileHover={{ scale: 1.1 }}
+                    className="flex flex-col items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-all"
                   >
                     <div className="mb-2">{tool.icon}</div>
                     <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -115,8 +113,8 @@ export default function About() {
                     </span>
                   </motion.div>
                 ))}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
