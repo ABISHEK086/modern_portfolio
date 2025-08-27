@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss, SiMysql, SiDjango, SiFlutter } from "react-icons/si";
 
-// Animation Variants
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -71,7 +71,7 @@ export default function About() {
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left - Text */}
+            {}
             <motion.div variants={fadeInUp}>
               <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
                 My Expertise
@@ -90,7 +90,7 @@ export default function About() {
               </p>
             </motion.div>
 
-            {/* Right - Toolkit */}
+            {}
             <motion.div variants={fadeInUp} className="space-y-6">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
                 My Toolkit

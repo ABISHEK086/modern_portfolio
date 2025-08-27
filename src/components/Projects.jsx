@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import SpaceBackground from "./SpaceBackground" // 👈 import the glitter space background
+import SpaceBackground from "./SpaceBackground" 
 
 const projects = [
   {
@@ -69,7 +69,7 @@ export default function Projects() {
     window.open(url, "_blank")
   }
 
-  // Image animation variants
+  
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -89,7 +89,7 @@ export default function Projects() {
     },
   }
 
-  // Container animation variants
+  
   const containerVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -107,7 +107,7 @@ export default function Projects() {
       id="projects"
       className="relative py-16 bg-white dark:bg-gray-900 transition-colors duration-200 overflow-hidden"
     >
-      {/* 🌌 Glitter / Space background */}
+      {}
       <div className="absolute inset-0 z-0">
         <SpaceBackground />
       </div>

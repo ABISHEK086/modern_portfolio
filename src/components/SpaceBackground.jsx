@@ -3,7 +3,7 @@ import { Stars } from "@react-three/drei"
 import * as THREE from "three"
 import { useRef } from "react"
 
-// Floating Glitter Particles
+
 function GlitterParticles({ count = 100 }) {
   const mesh = useRef()
   const temp = new THREE.Object3D()
@@ -40,7 +40,7 @@ function GlitterParticles({ count = 100 }) {
   )
 }
 
-// Background Space Scene
+
 export default function SpaceBackground() {
   return (
     <Canvas
@@ -54,11 +54,11 @@ export default function SpaceBackground() {
         zIndex: 0,
       }}
     >
-      {/* Ambient Glow */}
+      {}
       <ambientLight intensity={0.6} />
       <pointLight position={[10, 10, 10]} intensity={1.5} />
 
-      {/* Stars */}
+      {}
       <Stars
         radius={100}
         depth={50}
@@ -69,7 +69,7 @@ export default function SpaceBackground() {
         speed={1}
       />
 
-      {/* Glitter Particles */}
+      {}
       <GlitterParticles count={200} />
     </Canvas>
   )

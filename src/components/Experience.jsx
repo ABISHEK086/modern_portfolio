@@ -6,9 +6,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import SpaceBackground from './SpaceBackground'; // 👈 import your glitter/space bg
+import SpaceBackground from './SpaceBackground'; 
 
-// Import your images
+
 import AccentureImage from '../assets/accenture.png';
 import AccentureeImage from '../assets/Accenturee.png';
 import JpmorganImage from '../assets/Jp.png';
@@ -92,7 +92,7 @@ export default function Experience() {
     }
   ];
 
-  // Image animation variants
+ 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { 
@@ -111,7 +111,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="relative py-16 bg-white dark:bg-gray-900 overflow-hidden">
-      {/* 🌌 Glitter/space background */}
+      {}
       <div className="absolute inset-0 z-0">
         <SpaceBackground />
       </div>
@@ -152,7 +152,7 @@ export default function Experience() {
                   transition={{ duration: 0.4 }}
                   whileHover={{ y: -2 }}
                 >
-                  {/* Image Section */}
+                  {}
                   <motion.div 
                     className="relative h-48 w-full overflow-hidden"
                     initial="hidden"
@@ -174,7 +174,7 @@ export default function Experience() {
                     />
                   </motion.div>
 
-                  {/* Content Section */}
+                  {}
                   <div className="p-4 flex-1 flex flex-col">
                     <div className="flex items-center gap-2 mb-2">
                       <FiBriefcase className="text-primary dark:text-secondary text-sm" />

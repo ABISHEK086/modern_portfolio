@@ -30,7 +30,7 @@ export default function Education() {
       id="education"
       className="relative py-24 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 transition-colors duration-300"
     >
-      {/* Decorative Background Glow */}
+      {}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-20 left-1/2 w-[500px] h-[500px] -translate-x-1/2 rounded-full bg-primary/20 dark:bg-secondary/20 blur-3xl opacity-40"></div>
       </div>
@@ -58,10 +58,10 @@ export default function Education() {
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="relative mb-12 ml-6 group"
               >
-                {/* Timeline Dot */}
+                {}
                 <span className="absolute -left-[30px] top-4 w-6 h-6 rounded-full bg-primary dark:bg-secondary border-4 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform"></span>
 
-                {/* Card */}
+                {}
                 <div className="bg-gray-50 dark:bg-gray-800/90 p-6 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-transparent hover:border-primary/40 dark:hover:border-secondary/40 backdrop-blur-sm">
                   <div className="flex justify-between items-start">
                     <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">

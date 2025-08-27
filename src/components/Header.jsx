@@ -10,7 +10,7 @@ export default function Header({ darkMode, setDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
   
-  // Enhanced scroll animations
+  
   const headerHeight = useTransform(scrollY, [0, 100], [0, -100]);
   const headerOpacity = useTransform(scrollY, [0, 80], [1, 0.95]);
   const headerBlur = useTransform(scrollY, [0, 100], ["blur(0px)", "blur(8px)"]);
@@ -26,10 +26,10 @@ export default function Header({ darkMode, setDarkMode }) {
     ['rgba(17, 24, 39, 0.8)', 'rgba(17, 24, 39, 0.95)']
   );
 
-  // Memoized close menu function
+ 
   const closeMenu = useCallback(() => setOpen(false), []);
 
-  // Close mobile menu when scrolling down
+  
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (open && latest > 100) {
       closeMenu();
@@ -53,7 +53,7 @@ export default function Header({ darkMode, setDarkMode }) {
     { icon: <FiMail size={18} />, url: "mailto:your-email@example.com", name: "Email" },
   ];
 
-  // Animation variants
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -108,7 +108,7 @@ export default function Header({ darkMode, setDarkMode }) {
     }
   };
 
-  // Smooth scroll to section
+  
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -117,7 +117,7 @@ export default function Header({ darkMode, setDarkMode }) {
     }
   };
 
-  // Close menu when clicking outside
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (open && !event.target.closest('.mobile-menu-container')) {
@@ -144,7 +144,7 @@ export default function Header({ darkMode, setDarkMode }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          {/* Logo with profile image */}
+          {}
           <Link 
             to="/" 
             className="flex items-center gap-3"
@@ -173,7 +173,7 @@ export default function Header({ darkMode, setDarkMode }) {
             </motion.div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {}
           <motion.nav 
             className="hidden md:flex items-center gap-8"
             variants={containerVariants}
@@ -196,9 +196,9 @@ export default function Header({ darkMode, setDarkMode }) {
             ))}
           </motion.nav>
 
-          {/* Right side (social + dark mode) */}
+          {}
           <div className="flex items-center gap-4">
-            {/* Social Icons - Desktop */}
+            {}
             <motion.div 
               className="hidden md:flex items-center gap-4"
               variants={containerVariants}
@@ -222,7 +222,7 @@ export default function Header({ darkMode, setDarkMode }) {
               ))}
             </motion.div>
 
-            {/* Dark Mode Toggle */}
+            {}
             <motion.button
               onClick={() => setDarkMode(!darkMode)}
               whileHover={{ scale: 1.1 }}
@@ -238,7 +238,7 @@ export default function Header({ darkMode, setDarkMode }) {
               )}
             </motion.button>
 
-            {/* Mobile Menu Button */}
+            {}
             <motion.button 
               className="md:hidden p-2 rounded-full focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700/50"
               onClick={() => setOpen(!open)}
@@ -250,7 +250,7 @@ export default function Header({ darkMode, setDarkMode }) {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {}
         <motion.div 
           className="md:hidden mobile-menu-container bg-white dark:bg-gray-800 overflow-hidden"
           initial="closed"

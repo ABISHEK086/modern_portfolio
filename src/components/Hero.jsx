@@ -7,7 +7,7 @@ import {
   FiDownload,
 } from "react-icons/fi"
 import profileImage from "../assets/profile.jpeg"
-import SpaceBackground from "./SpaceBackground" // 3D animated background
+import SpaceBackground from "./SpaceBackground" 
 
 export default function Hero() {
   const scrollToSection = (sectionId) => {
@@ -29,13 +29,13 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center pt-20 overflow-hidden"
     >
-      {/* 🚀 3D Animated Space Background */}
+      {}
       <SpaceBackground />
 
-      {/* Content */}
+      {}
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* Text Content */}
+          {}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -66,7 +66,7 @@ export default function Hero() {
               work – it sings.
             </motion.p>
 
-            {/* Buttons */}
+            {}
             <div className="flex flex-wrap gap-4 mb-12">
               <motion.button
                 onClick={() => scrollToSection("projects")}
@@ -94,7 +94,7 @@ export default function Hero() {
               </motion.button>
             </div>
 
-            {/* Social Icons */}
+            {}
             <div className="flex gap-4">
               {[
                 {
@@ -128,7 +128,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Image Content */}
+          {}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}

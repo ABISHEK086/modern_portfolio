@@ -14,7 +14,7 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
 
-  // Initialize dark mode from localStorage or system preference
+  
   useEffect(() => {
     setMounted(true);
     const savedMode = localStorage.getItem('darkMode');
@@ -26,7 +26,7 @@ export default function App() {
     );
   }, []);
 
-  // Apply dark mode class to document
+ 
   useEffect(() => {
     if (mounted) {
       if (darkMode) {
@@ -39,7 +39,7 @@ export default function App() {
     }
   }, [darkMode, mounted]);
 
-  // Prevent hydration mismatch
+ 
   if (!mounted) {
     return null;
   }
