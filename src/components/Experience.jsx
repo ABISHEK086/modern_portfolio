@@ -6,6 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import SpaceBackground from './SpaceBackground'; // 👈 import your glitter/space bg
+
 // Import your images
 import AccentureImage from '../assets/accenture.png';
 import AccentureeImage from '../assets/Accenturee.png';
@@ -19,7 +21,7 @@ export default function Experience() {
     {
       role: "Developer and Technology Job Simulation",
       company: "Accenture",
-      duration: "Jun 2024",
+      duration: "Aug 2024",
       description: [
         "Completed Accenture's Developer & Technology Job Simulation, gaining hands-on experience in web development, code debugging, and technical assessments.",
         "Developed and optimized functional applications while following industry best practices in Agile workflows and version control.",
@@ -43,7 +45,7 @@ export default function Experience() {
     {
       role: "Software Engineering",
       company: "JPMorgan & Co",
-      duration: "Aug 2024",
+      duration: "Oct 2024",
       description: [
         "Completed JPMorgan Chase's Software Engineering Simulation, interfacing with real-time stock price data feeds and implementing financial data visualization tools.",
         "Leveraged proprietary frameworks to process market data and optimize trader dashboards.",
@@ -55,7 +57,7 @@ export default function Experience() {
     {
       role: "Power BI",
       company: "PWC",
-      duration: "Aug 2024",
+      duration: "Jul 2024",
       description: [
         "Analyzed key business metrics including call center trends, customer retention, and diversity & inclusion using Power BI.",
         "Transformed raw data into actionable insights through interactive dashboards and visualizations.",
@@ -79,7 +81,7 @@ export default function Experience() {
     {
       role: "Data Visualization Simulation",
       company: "TATA",
-      duration: "Aug 2024",
+      duration: "Sep 2024",
       description: [
         "Translated business data into actionable insights through strategic visualization.",
         "Designed and optimized dashboards to communicate complex analysis effectively.",
@@ -103,17 +105,20 @@ export default function Experience() {
     },
     hover: {
       scale: 1.03,
-      transition: {
-        duration: 0.3
-      }
+      transition: { duration: 0.3 }
     }
   };
 
   return (
-    <section id="experience" className="py-8 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section id="experience" className="relative py-16 bg-white dark:bg-gray-900 overflow-hidden">
+      {/* 🌌 Glitter/space background */}
+      <div className="absolute inset-0 z-0">
+        <SpaceBackground />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2 
-          className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white"
+          className="text-3xl font-bold mb-10 text-center text-gray-900 dark:text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -129,37 +134,25 @@ export default function Experience() {
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
             breakpoints={{
-              640: {
-                slidesPerView: 1.2,
-                spaceBetween: 15
-              },
-              768: {
-                slidesPerView: 1.5,
-                spaceBetween: 15
-              },
-              1024: {
-                slidesPerView: 2.1,
-                spaceBetween: 15
-              }
+              640: { slidesPerView: 1.2, spaceBetween: 15 },
+              768: { slidesPerView: 1.5, spaceBetween: 15 },
+              1024: { slidesPerView: 2.1, spaceBetween: 15 }
             }}
             className="!pb-10"
           >
             {experiences.map((exp, index) => (
               <SwiperSlide key={index} className="h-auto">
                 <motion.div
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden h-full flex flex-col"
+                  className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden h-full flex flex-col border border-purple-500/10"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
                   whileHover={{ y: -2 }}
                 >
-                  {/* Image Section with enhanced animations */}
+                  {/* Image Section */}
                   <motion.div 
                     className="relative h-48 w-full overflow-hidden"
                     initial="hidden"
@@ -171,7 +164,7 @@ export default function Experience() {
                     <img 
                       src={exp.image} 
                       alt={exp.imageAlt}
-                      className="w-full h-full object-contain p-2"  // Changed to object-contain for full visibility
+                      className="w-full h-full object-contain p-2"
                     />
                     <motion.div 
                       className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"
