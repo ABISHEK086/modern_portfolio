@@ -12,6 +12,15 @@ const projects = [
       "https://student-performance-prediction-ml-enjugumqrmvssvnarrquav.streamlit.app/",
   },
   {
+    title: "Django E-Commerce Website (Amazon Clone)",
+    description:
+      "A full-stack e-commerce application with authentication, product & order management, shopping cart, and admin dashboard, built using Django, MySQL, and REST APIs with a responsive frontend for real-world deployment",
+    tags: ["Python", "Django", "JavaScript", "MySQL","Bootstrap", "HTML", "Css"],
+    image: "/p8.jpg",
+    githubUrl:
+      "https://github.com/ABISHEK086/E-Commerce---Django/",
+  },
+  {
     title: "Modern Dynamic Business Page",
     description:
       "Crafted a visually appealing and high-performance business page with engaging animations and seamless responsiveness, ensuring an immersive user experience.",
