@@ -14,7 +14,7 @@ module.exports = {
           light: "#8B5CF6",
           dark: "#6D28D9"
         },
-        // Define your custom colors here
+      
         light: {
           text: "#1E293B",
           bg: "#F8FAFC",
