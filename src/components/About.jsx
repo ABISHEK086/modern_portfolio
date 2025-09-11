@@ -77,16 +77,7 @@ export default function About() {
                 My Expertise
               </h3>
               <p className="mb-4 text-gray-600 dark:text-gray-300">
-                Passionate and detail-oriented Frontend Developer with strong
-                proficiency in React.js, JavaScript, and Tailwind CSS, dedicated
-                to building modern, responsive web applications. Skilled in
-                crafting clean, efficient code and intuitive user interfaces.
-                Experienced in Python, Django, and SQL for full-stack
-                development, with a keen interest in expanding technical
-                expertise. Collaborative problem-solver with a commitment to
-                continuous learning and staying updated with industry trends.
-                Eager to contribute to impactful projects and grow within a
-                dynamic development team.
+               Software Developer skilled in React.js, JavaScript, Tailwind CSS, Python, Django, and SQL, with hands-on experience from internships at JPMorgan Chase & Co. and Accenture. I build scalable, responsive applications and excel at API integration, debugging, and data-driven solutions. Eager to contribute technical expertise, problem-solving, and a growth mindset to create impactful products.
               </p>
             </motion.div>
 
