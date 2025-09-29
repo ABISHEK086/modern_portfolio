@@ -13,7 +13,6 @@ import './App.css';
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
-
 useEffect(() => {
     setMounted(true);
     const savedMode = localStorage.getItem('darkMode');
