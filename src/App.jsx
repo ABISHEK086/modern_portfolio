@@ -24,8 +24,7 @@ export default function App() {
     );
   }, []);
 
- 
-useEffect(() => {
+ useEffect(() => {
     if (mounted) {
       if (darkMode) {
         document.documentElement.classList.add('dark');
