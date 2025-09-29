@@ -13,7 +13,7 @@ import './App.css';
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
-useEffect(() => {
+    useEffect(() => {
     setMounted(true);
     const savedMode = localStorage.getItem('darkMode');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
