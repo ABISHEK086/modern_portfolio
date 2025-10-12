@@ -20,6 +20,15 @@ const projects = [
     githubUrl:
       "https://github.com/ABISHEK086/E-Commerce---Django/",
   },
+   {
+    title: "Instant Question Generator",
+    description:
+      "A full-stack Django web application that lets users generate and view subject-specific question papers with multiple difficulty levels. Features role-based access for Admin, Staff, and Students, PDF generation and retrieval, and a responsive, user-friendly interface.",
+    tags: ["Python", "Django", "JavaScript", "SQLite","HTML", "Css"],
+    image: "/p9.jfif",
+    githubUrl:
+      "https://github.com/ABISHEK086/Django-Question-generator",
+  },
   {
     title: "Modern Dynamic Business Page",
     description:
