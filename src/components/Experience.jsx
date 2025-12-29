@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';                 
       
 import SpaceBackground from './SpaceBackground';      
- 
+  
  
 import AccentureImage from '../assets/accenture.png';  
 import AccentureeImage from '../assets/Accenturee.png';
