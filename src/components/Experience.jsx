@@ -11,7 +11,7 @@ import SpaceBackground from './SpaceBackground';
 
 import AccentureImage from '../assets/accenture.png';
 import AccentureeImage from '../assets/Accenturee.png';
-import JpmorganImage from '../assets/Jp.png';
+import JpmorganImage from '../assets/Jp.png'; 
 import PwcImage from '../assets/pwc.png';
 import TataImage from '../assets/TATA.png';
 import QuantiumImage from '../assets/quantium.png';
