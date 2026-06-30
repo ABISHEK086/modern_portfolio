@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';        
 import Footer from './components/Footer'; 
 import Experience from './components/Experience';
+import Certificates from './components/Certificates';
 import Education from './components/Education'; 
 import './App.css';
 
@@ -53,6 +54,7 @@ export default function App() {
                 <About />
                 <Projects />
                 <Experience />
+                <Certificates />
                 <Education />
                 <Contact />
               </>

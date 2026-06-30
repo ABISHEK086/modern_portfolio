@@ -7,8 +7,17 @@ import {
   FaCss3Alt,
   FaWordpress,
   FaBootstrap,
+  FaJava,
 } from "react-icons/fa";
-import { SiTailwindcss, SiMysql, SiDjango, SiFlutter } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiMysql,
+  SiDjango,
+  SiFirebase,
+  SiNextdotjs,
+  SiFastapi,
+  SiPostgresql,
+} from "react-icons/si";
 
 
 const fadeInUp = {
@@ -28,9 +37,13 @@ const containerStagger = {
 export default function About() {
   const tools = [
     { name: "Python", icon: <FaPython size={32} className="text-[#3776AB]" /> },
+    { name: "Java", icon: <FaJava size={32} className="text-[#007396]" /> },
     { name: "Django", icon: <SiDjango size={32} className="text-[#092E20]" /> },
-    { name: "SQL", icon: <SiMysql size={32} className="text-[#4479A1]" /> },
+    { name: "FastAPI", icon: <SiFastapi size={32} className="text-[#009688]" /> },
+    { name: "SQL", icon: <SiPostgresql size={32} className="text-[#336791]" /> },
+    { name: "MySQL", icon: <SiMysql size={32} className="text-[#4479A1]" /> },
     { name: "React", icon: <FaReact size={32} className="text-[#61DAFB]" /> },
+    { name: "Next.js", icon: <SiNextdotjs size={32} className="text-gray-900 dark:text-white" /> },
     { name: "JavaScript", icon: <FaJs size={32} className="text-[#F7DF1E]" /> },
     {
       name: "Tailwind CSS",
@@ -42,11 +55,11 @@ export default function About() {
     },
     { name: "HTML5", icon: <FaHtml5 size={32} className="text-[#E34F26]" /> },
     { name: "CSS3", icon: <FaCss3Alt size={32} className="text-[#1572B6]" /> },
+    { name: "Firebase", icon: <SiFirebase size={32} className="text-[#FFCA28]" /> },
     {
       name: "WordPress",
       icon: <FaWordpress size={32} className="text-[#21759B]" />,
     },
-    { name: "Flutter", icon: <SiFlutter size={32} className="text-[#02569B]" /> },
   ];
 
   return (
@@ -77,7 +90,9 @@ export default function About() {
                 My Expertise
               </h3>
               <p className="mb-4 text-gray-600 dark:text-gray-300">
-               Software Developer skilled in React.js, JavaScript, Tailwind CSS, Python, Django, and SQL, with hands-on experience from internships at JPMorgan Chase & Co. and Accenture. I build scalable, responsive applications and excel at API integration, debugging, and data-driven solutions. Eager to contribute technical expertise, problem-solving, and a growth mindset to create impactful products.
+               I'm a Software Engineer focused on building intelligent, user-centric applications powered by modern web technologies and AI. From frontend performance to backend logic, I enjoy turning complex ideas into scalable, clean, and practical solutions. My work sits at the intersection of software engineering and AI - where speed, usability, and real-world impact matter most.
+I've worked across product development and internships with companies like JLK Technology, JPMorgan Chase, Accenture, and Quantium - solving problems ranging from UI performance optimization to financial data visualization and data-driven decision making. I've built interactive dashboards, improved system reliability, and applied analytics to generate meaningful business insights.
+Right now, I'm looking for opportunities where I can contribute as a Developer, build impactful products, and grow in AI-powered development environments. I'm especially interested in teams that value ownership, fast learning, and building real-world solutions - not just demos.
               </p>
             </motion.div>
 
