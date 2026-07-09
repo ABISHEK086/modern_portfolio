@@ -55,15 +55,13 @@ export default function Hero() {
               className="text-2xl md:text-3xl text-gray-700 dark:text-purple-200 mb-6"
               whileHover={{ scale: 1.01 }}
             >
-              The Stack Architect
+              Software Developer
             </motion.h2>
             <motion.p
               className="text-lg mb-8 text-gray-600 dark:text-purple-100"
               whileHover={{ scale: 1.01 }}
             >
-              I transform React components into seamless digital experiences
-              where performance meets pixel-perfect design. My code doesn't just
-              work – it sings.
+              Turning ideas into functioning software across the stack , solid backend systems and interfaces people actually enjoy using.
             </motion.p>
 
             {}

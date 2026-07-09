@@ -3,6 +3,14 @@ import SpaceBackground from "./SpaceBackground"
 
 const projects = [
   {
+  title: "HRMS – Human Resource Management System",
+  description:
+    "A full-stack HR management platform with JWT-based authentication and role-based access control for employees and admins. Features include a live dashboard, attendance check-in/out, leave application and approval workflows, an employee directory, and an admin panel for managing staff and company announcements.",
+  tags: ["React", "Tailwind CSS", "Ant Design", "Python", "FastAPI", "MySQL", "SQLAlchemy"],
+  image: "/hrms.jfif",
+  githubUrl:
+    "https://github.com/ABISHEK086/HRMS-Human-Resource-Management-System",
+},{
     title: "Machine Learning – Student Performance Prediction",
     description:
       "Built a predictive model to classify student performance using academic and demographic data, comparing multiple classifiers and providing graph visualizations with an interactive CLI.",
