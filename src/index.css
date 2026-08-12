@@ -10,6 +10,14 @@
     --color-secondary: 124 58 237;
     --color-secondary-light: 139 92 246;
     --color-secondary-dark: 109 40 217;
+
+    --background: 0 0% 7%;
+    --background-light: 0 0% 12%;
+    --foreground: 0 0% 95%;
+    --primary: 150 100% 50%;
+    --primary-foreground: 0 0% 7%;
+    --muted-foreground: 0 0% 60%;
+    --border: 0 0% 20%;
   }
 }
 
@@ -49,5 +57,47 @@
   .header-style {
     @apply bg-white/80 backdrop-blur-md shadow-sm
            dark:bg-gray-900/80 dark:shadow-gray-800/20;
+  }
+
+  @keyframes drift-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(5%, -8%) scale(1.1); }
+    66% { transform: translate(-4%, 6%) scale(0.95); }
+  }
+  @keyframes drift-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-6%, 5%) scale(0.9); }
+    66% { transform: translate(6%, -4%) scale(1.08); }
+  }
+
+  .animate-drift-1 {
+    animation: drift-1 18s ease-in-out infinite;
+  }
+  .animate-drift-2 {
+    animation: drift-2 22s ease-in-out infinite;
+  }
+}
+
+.font-anton {
+    font-family: 'Anton', sans-serif;
+}
+
+@layer utilities {
+  .certificate-swiper .swiper-button-next,
+  .certificate-swiper .swiper-button-prev {
+    color: hsl(var(--primary));
+    width: 32px;
+    height: 32px;
+  }
+  .certificate-swiper .swiper-button-next::after,
+  .certificate-swiper .swiper-button-prev::after {
+    font-size: 16px;
+  }
+  .certificate-swiper .swiper-pagination-bullet {
+    background: hsl(var(--border));
+    opacity: 1;
+  }
+  .certificate-swiper .swiper-pagination-bullet-active {
+    background: hsl(var(--primary));
   }
 }

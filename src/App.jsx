@@ -9,12 +9,14 @@ import Footer from './components/Footer';
 import Experience from './components/Experience';
 import Certificates from './components/Certificates';
 import Education from './components/Education'; 
+import Preloader from './components/Preloader';
 import './App.css';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
-    useEffect(() => {
+
+  useEffect(() => {
     setMounted(true);
     const savedMode = localStorage.getItem('darkMode');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -25,7 +27,7 @@ export default function App() {
     );
   }, []);
 
- useEffect(() => {
+  useEffect(() => {
     if (mounted) {
       if (darkMode) {
         document.documentElement.classList.add('dark');
@@ -37,13 +39,13 @@ export default function App() {
     }
   }, [darkMode, mounted]);
 
- 
   if (!mounted) {
     return null;
   }
 
   return (
     <Router>
+      <Preloader />
       <div className={`min-h-screen flex flex-col ${darkMode ? 'dark' : ''}`}>
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <main className="flex-1 bg-white dark:bg-gray-900 transition-colors duration-200">

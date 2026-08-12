@@ -1,204 +1,168 @@
-import { motion } from "framer-motion"
-import SpaceBackground from "./SpaceBackground" 
+import { motion } from "framer-motion";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const projects = [
   {
-  title: "HRMS – Human Resource Management System",
+  title: "RepoPilot – AI GitHub Repository Explainer & Issue Resolver",
   description:
-    "A full-stack HR management platform with JWT-based authentication and role-based access control for employees and admins. Features include a live dashboard, attendance check-in/out, leave application and approval workflows, an employee directory, and an admin panel for managing staff and company announcements.",
-  tags: ["React", "Tailwind CSS", "Ant Design", "Python", "FastAPI", "MySQL", "SQLAlchemy"],
-  image: "/hrms.jfif",
-  githubUrl:
-    "https://github.com/ABISHEK086/HRMS-Human-Resource-Management-System",
+    "An AI-powered developer platform with two tools: a Repo Explainer that analyzes any public GitHub repository and generates an architecture summary, tech stack breakdown, and system diagram — and an autonomous Issue Solver that reads a GitHub issue, analyzes the actual repo code, generates a targeted fix using LLMs, and opens a real pull request via the GitHub API. Built with deterministic snippet-patching to prevent silent code corruption, GitHub/Google OAuth2 authentication, and engineered entirely on free-tier APIs.",
+  tags: ["React.js","Next.js", "TypeScript", "FastAPI", "Groq LLM"],
+  image: "/repo-pilot.jpg",
+  githubUrl: "https://github.com/ABISHEK086/RepoPilot",
 },{
-    title: "Machine Learning – Student Performance Prediction",
+  title: "MeetMind – AI Meeting Intelligence Tool",
+  description:
+    "A full-stack AI web application that transcribes meeting audio using Groq Whisper and extracts structured action items, owner assignments, priority levels, and meeting summaries using Groq LLaMA — running entirely on free-tier APIs. Features animated drag-to-reorder action cards, PDF export, shareable summary links, and a fully mobile-responsive UI with swipe gestures. Deployed on Vercel.",
+  tags: ["React.js","Next.js" ,"TypeScript", "Groq API", "Tailwind CSS"],
+  image: "/meetmind.jpg",
+  githubUrl: "https://github.com/ABISHEK086/Meet-Mind-",
+},{
+  title: "Fault-line - A software supply-chain vulnerability detection tool",
+  description:
+    "A tool that instantly shows which parts of a software company would be affected if a security flaw were found in one of their code libraries - and which team to notify. Built with a graph database (CognoDB) to trace these hidden dependency chains, since traditional databases handle this poorly.",
+  tags: ["Next.js", "TypeScript","Python","Tailwind CSS", "Flask", "Groq LLM"],
+  image: "/fault-line.jpg",
+  githubUrl: "https://github.com/ABISHEK086/Fault-line",
+},{
+    title: "HRMS – Human Resource Management System",
     description:
-      "Built a predictive model to classify student performance using academic and demographic data, comparing multiple classifiers and providing graph visualizations with an interactive CLI.",
-    tags: ["Python", "Scikit-learn", "Matplotlib", "Seaborn", "Pandas", "NumPy"],
-    image: "/p7.jfif",
+      "A full-stack HR management platform with JWT-based authentication and role-based access control for employees and admins.",
+    tags: ["React.js","Tailwind CSS", "FastAPI", "MySQL"],
+    image: "/hrms.jfif",
     githubUrl:
-      "https://student-performance-prediction-ml-enjugumqrmvssvnarrquav.streamlit.app/",
-  },
-  {
-    title: "Django E-Commerce Website (Amazon Clone)",
-    description:
-      "A full-stack e-commerce application with authentication, product & order management, shopping cart, and admin dashboard, built using Django, MySQL, and REST APIs with a responsive frontend for real-world deployment",
-    tags: ["Python", "Django", "JavaScript", "MySQL","Bootstrap", "HTML", "Css"],
-    image: "/p8.jpg",
-    githubUrl:
-      "https://github.com/ABISHEK086/E-Commerce---Django/",
+      "https://github.com/ABISHEK086/HRMS-Human-Resource-Management-System",
   },
   {
     title: "Instant Question Generator",
     description:
-      "A full-stack Django web application that lets users generate and view subject-specific question papers with multiple difficulty levels. Features role-based access for Admin, Staff, and Students, PDF generation and retrieval, and a responsive, user-friendly interface.",
-    tags: ["Python", "Django", "JavaScript", "SQLite","HTML", "Css"],
+      "A Django app for generating subject-specific question papers with role-based access and PDF generation.",
+    tags: ["HTML","CSS","JavaScript","Python", "Django", "SQLite"],
     image: "/p9.jfif",
-    githubUrl:
-      "https://github.com/ABISHEK086/Django-Question-generator",
+    githubUrl: "https://github.com/ABISHEK086/Django-Question-generator",
   },
   {
     title: "Modern Dynamic Business Page",
     description:
-      "Crafted a visually appealing and high-performance business page with engaging animations and seamless responsiveness, ensuring an immersive user experience.",
-    tags: ["React", "Tailwind Css", "Framer Motion"],
+      "A high-performance business page with engaging animations and seamless responsiveness.",
+    tags: ["React.js","Tailwind CSS", "Framer Motion"],
     image: "/P1.png",
-    githubUrl:
-      "https://buisnesspage-git-main-abishek086s-projects.vercel.app/",
+    githubUrl: "https://buisnesspage-git-main-abishek086s-projects.vercel.app/",
   },
   {
     title: "Next-Gen Website Builder Landing Page",
     description:
-      "Designed a sleek and interactive landing page for a website builder, featuring dynamic animations, smooth transitions, and a modern aesthetic to captivate users.",
-    tags: ["React", "Tailwind CSS", "Framer Motion"],
+      "An interactive landing page featuring dynamic animations and a modern aesthetic.",
+    tags: ["React.js", "Tailwind CSS", "Framer Motion"],
     image: "/p2.png",
-    githubUrl:
-      "https://modernbusinesslanding-git-main-abishek086s-projects.vercel.app/",
+    githubUrl: "https://modernbusinesslanding-git-main-abishek086s-projects.vercel.app/",
   },
   {
     title: "Creative Agency Page for Startup",
     description:
-      "A digital business leveraging technology to offer innovative solutions, products, or services online. Focused on scalability, efficiency, and a seamless user experience.",
-    tags: ["HTML", "Css", "Javascript", "Bootstrap"],
+      "A digital business page leveraging technology to offer innovative solutions online.",
+    tags: ["HTML","CSS","JavaScript","Bootstrap"],
     image: "/p5.png",
-    githubUrl:
-      "https://modernstartup-git-master-abishek086s-projects.vercel.app/",
+    githubUrl: "https://modernstartup-git-master-abishek086s-projects.vercel.app/",
   },
-  {
-    title: "Shopping Cart System",
-    description:
-      "The shopping cart in Java is a project for the management of a shopping list. The project intends for the ordering of products you want. With this project, you can easily manage your orders in a more systematic way.",
-    tags: ["Java", "SQL", "HTML", "Css", "Javascript"],
-    image: "/p.jpg",
-    githubUrl: "https://github.com/ABISHEK086/ShoppingCart",
+];
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const containerStagger = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.06,
+    },
   },
-  {
-    title: "PractiScore",
-    description:
-      "A mobile application designed to manage and track lab practical marks for students. Faculty can input marks based on categories like observation, verification, and viva. The app features role-based access, real-time updates, and centralized data storage using Firebase.",
-    tags: ["Java", "XML", "Firebase"],
-    image: "/p5.jpg",
-    githubUrl: "https://github.com/ABISHEK086/PractiScore",
-  },
-  {
-    title: "QueriesGen",
-    description:
-      "A mobile app to track lab practical marks and generate question papers using the built-in tool for faculty and students. Includes features like subject-wise question paper selection, role-based access, and offline PDF viewing for enhanced usability.",
-    tags: ["Java", "XML", "Firebase"],
-    image: "/p6.jfif",
-    githubUrl: "https://github.com/ABISHEK086/QueriesGen",
-  },
-]
+};
 
 export default function Projects() {
   const handleVisitClick = (url) => {
-    window.open(url, "_blank")
-  }
-
-  
-  const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut",
-      },
-    },
-  }
-
-  
-  const containerVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.1,
-      },
-    },
-  }
+    window.open(url, "_blank");
+  };
 
   return (
     <section
       id="projects"
-      className="relative py-16 bg-white dark:bg-gray-900 transition-colors duration-200 overflow-hidden"
+      className="relative py-28 bg-[hsl(var(--background))] overflow-hidden"
     >
-      {}
-      <div className="absolute inset-0 z-0">
-        <SpaceBackground />
-      </div>
+      <div className="absolute bottom-0 left-0 w-[30vw] h-[30vw] rounded-full bg-[hsl(var(--primary)/0.06)] blur-[100px] pointer-events-none" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl font-bold mb-10 text-center text-gray-900 dark:text-white">
-          My <span className="text-primary dark:text-secondary">Projects</span>
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, i) => (
-            <motion.div
-              key={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              variants={containerVariants}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -3 }}
-              className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transition-colors duration-200 group h-full flex flex-col border border-purple-500/10"
-            >
-              <motion.div
-                className="overflow-hidden"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
+      <div className="container mx-auto px-6 relative z-10">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={containerStagger}
+          className="max-w-6xl mx-auto"
+        >
+          <motion.div variants={fadeInUp} className="flex items-center gap-2 mb-6">
+            <span className="size-2 rounded-full bg-[hsl(var(--primary))]" />
+            <span className="text-sm tracking-widest uppercase text-[hsl(var(--muted-foreground))]">
+              Work
+            </span>
+          </motion.div>
+
+          <motion.h2
+            variants={fadeInUp}
+            className="font-anton uppercase leading-[0.95] text-[hsl(var(--foreground))] text-4xl sm:text-5xl lg:text-6xl mb-16 max-w-3xl"
+          >
+            Selected <span className="text-[hsl(var(--primary))]">projects</span>
+          </motion.h2>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[hsl(var(--border))] border border-[hsl(var(--border))]">
+            {projects.map((project, i) => (
+              <motion.button
+                key={i}
+                variants={fadeInUp}
+                onClick={() => handleVisitClick(project.githubUrl)}
+                className="group relative aspect-square bg-[hsl(var(--background))] overflow-hidden text-left cursor-pointer"
               >
-                <motion.img
+                <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-40 object-cover"
-                  variants={imageVariants}
-                  whileHover="hover"
+                  className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out"
                 />
-              </motion.div>
-              <div className="p-4 flex-grow flex flex-col">
-                <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white line-clamp-1">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm line-clamp-3 flex-grow">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {project.tags.map((tag, j) => (
-                    <motion.span
-                      key={j}
-                      whileHover={{ scale: 1.05 }}
-                      className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs text-gray-800 dark:text-gray-200"
-                    >
-                      {tag}
-                    </motion.span>
-                  ))}
-                  <motion.span
-                    onClick={() => handleVisitClick(project.githubUrl)}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-xs text-blue-800 dark:text-blue-200 cursor-pointer hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors ml-auto"
-                  >
-                    Visit
-                  </motion.span>
+
+                <div className="absolute inset-0 bg-[hsl(var(--background))]/70 group-hover:bg-[hsl(var(--background))]/92 transition-colors duration-500" />
+
+                <span className="absolute top-4 left-4 font-anton text-xs text-[hsl(var(--muted-foreground))] group-hover:text-[hsl(var(--primary))] transition-colors duration-500">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+
+                <span className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-500">
+                  <FiArrowUpRight className="text-[hsl(var(--primary))]" size={18} />
+                </span>
+
+                <div className="absolute inset-x-0 bottom-0 p-4 translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 className="text-sm font-medium text-[hsl(var(--foreground))] mb-1.5 leading-snug line-clamp-2">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-xs text-[hsl(var(--muted-foreground))] mb-3 leading-relaxed line-clamp-2 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-16 transition-all duration-500 overflow-hidden">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tags.map((tag, j) => (
+                      <span
+                        key={j}
+                        className="text-[10px] uppercase tracking-wide text-[hsl(var(--primary))] border border-[hsl(var(--primary)/0.3)] px-1.5 py-0.5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.button>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
-  )
+  );
 }

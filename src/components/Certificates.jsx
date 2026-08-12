@@ -1,20 +1,13 @@
 import { motion } from 'framer-motion';
-import { FiBriefcase, FiCalendar } from 'react-icons/fi';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'; 
-import 'swiper/css';    
-import 'swiper/css/navigation';     
-import 'swiper/css/pagination';                  
-      
-import SpaceBackground from './SpaceBackground';      
-  
- 
-import AccentureImage from '../assets/accenture.png';  
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import AccentureImage from '../assets/accenture.png';
 import AccentureeImage from '../assets/Accenturee.png';
-import JpmorganImage from '../assets/Jp.png'; 
-import PwcImage from '../assets/pwc.png';
-import TataImage from '../assets/TATA.png';
-import QuantiumImage from '../assets/quantium.png';
+import JpmorganImage from '../assets/Jp.png';
 import pythonImage from '../assets/python.png';
 import AIImage from '../assets/AI-Fun.png';
 import ClaudeImage from '../assets/Claude.png';
@@ -30,52 +23,51 @@ export default function Experience() {
       description: [
         "Completed Accenture's Developer & Technology Job Simulation, gaining hands-on experience in web development, code debugging, and technical assessments.",
         "Developed and optimized functional applications while following industry best practices in Agile workflows and version control.",
-        "Strengthened problem-solving skills through practical coding challenges and real-world debugging scenarios."
       ],
       image: AccentureImage,
       imageAlt: "Accenture Office"
     },
-      {
+    {
       role: "Python",
       company: "Kaggle",
       description: [
-        "Completed a  Python course covering fundamental concepts such as variables, data types, loops, conditionals, and functions. Gained hands-on experience with basic data analysis and writingefficient Python code"
+        "Completed a Python course covering fundamental concepts such as variables, data types, loops, conditionals, and functions.",
       ],
       image: pythonImage,
       imageAlt: "Kaggle Python Course"
     },
-      {
+    {
       role: "AI Fundamentals",
       company: "IBM",
       description: [
-        "Explored Developer Tools, gaining expertise in version control (Git/GitHub), debugging, and testing. Learned to work with CI/CD pipelines, containerization (Docker), and deployment strategies. Skilled in using AI-powered tools for automation, code generation, and debugging, improving efficiency."
+        "Explored Developer Tools, gaining expertise in version control, debugging, and testing, plus CI/CD pipelines and containerization.",
       ],
       image: AIImage,
       imageAlt: "AI Fundamentals"
     },
-          {
+    {
       role: "Claude Code Certification",
       company: "Anthropic",
       description: [
-        "Completed Claude Code Certification from Anthropic, gaining expertise in AI-assisted coding and problem-solving. Mastered using Claude for code generation, debugging, and documentation, boosting development speed. Explored AI-driven workflows for testing, optimization, and automation."
+        "Completed Claude Code Certification from Anthropic, gaining expertise in AI-assisted coding, debugging, and documentation.",
       ],
       image: ClaudeImage,
       imageAlt: "Claude Code Certification"
     },
-          {
+    {
       role: "Solutions Architecture",
       company: "AWS",
       description: [
-        "Completed AWS Solution Architecture training, gaining expertise in designing scalable, secure cloud solutions. Mastered core AWS services (EC2, S3, RDS, Lambda) and  Well-Architected Framework principles. Skilled in cost optimization, migration strategies (6Rs), and building fault-tolerant systems. Hands-on experience with infrastructure-as-code (CloudFormation) and architecture documentation."
+        "Completed AWS Solution Architecture training, gaining expertise in designing scalable, secure cloud solutions using EC2, S3, RDS, and Lambda.",
       ],
       image: AWSImage,
       imageAlt: "AWS Solution Architecture"
     },
-          {
+    {
       role: "GenAI",
       company: "BCG",
       description: [
-        "Expert in applying GenAI solutions to business transformation (LLMs, RAG, multimodal AI) BCG-trained in responsible AI, Prompt engineering and Enterprise adoption frameworks"
+        "Trained in applying GenAI solutions to business transformation — LLMs, RAG, multimodal AI, responsible AI, and prompt engineering.",
       ],
       image: GenAIImage,
       imageAlt: "GenAI"
@@ -85,9 +77,7 @@ export default function Experience() {
       company: "Accenture",
       duration: "Jun 2024",
       description: [
-        "Completed Accenture's Advanced Engineering simulation, mastering OOP principles through hands-on coding challenges and system design exercises.",
-        "Refactored and optimized legacy codebases, improving maintainability and performance while adhering to SOLID design principles.",
-        "Developed scalable solutions using object-oriented patterns, with emphasis on clean architecture and efficient debugging techniques."
+        "Mastered OOP principles through hands-on coding challenges and system design exercises, refactoring legacy code with SOLID principles.",
       ],
       image: AccentureeImage,
       imageAlt: "Accenture Office"
@@ -97,132 +87,92 @@ export default function Experience() {
       company: "JPMorgan & Co",
       duration: "Oct 2024",
       description: [
-        "Completed JPMorgan Chase's Software Engineering Simulation, interfacing with real-time stock price data feeds and implementing financial data visualization tools.",
-        "Leveraged proprietary frameworks to process market data and optimize trader dashboards.",
-        "Developed analytical solutions for financial data representation, gaining hands-on experience in fintech systems and agile development workflows."
+        "Completed JPMorgan Chase's Software Engineering Simulation, interfacing with real-time stock price data feeds and financial data visualization tools.",
       ],
       image: JpmorganImage,
       imageAlt: "JPMorgan Office"
     },
   ];
 
- 
-  const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    },
-    hover: {
-      scale: 1.03,
-      transition: { duration: 0.3 }
-    }
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
   return (
-    <section id="experience" className="relative py-16 bg-white dark:bg-gray-900 overflow-hidden">
-      {}
-      <div className="absolute inset-0 z-0">
-        <SpaceBackground />
-      </div>
+    <section
+      id="certificates"
+      className="relative py-28 bg-[hsl(var(--background))] overflow-hidden"
+    >
+      <div className="absolute top-0 left-0 w-[30vw] h-[30vw] rounded-full bg-[hsl(var(--primary)/0.06)] blur-[100px] pointer-events-none" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.h2 
-          className="text-3xl font-bold mb-10 text-center text-gray-900 dark:text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+      <div className="container mx-auto px-6 relative z-10">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
+          variants={fadeInUp}
+          className="max-w-6xl mx-auto"
         >
-          <span className="text-primary dark:text-secondary">Certificates</span>
-        </motion.h2>
+          <div className="flex items-center gap-2 mb-6">
+            <span className="size-2 rounded-full bg-[hsl(var(--primary))]" />
+            <span className="text-sm tracking-widest uppercase text-[hsl(var(--muted-foreground))]">
+              Credentials
+            </span>
+          </div>
 
-        <div className="relative">
+          <h2 className="font-anton uppercase leading-[0.95] text-[hsl(var(--foreground))] text-4xl sm:text-5xl lg:text-6xl mb-16 max-w-3xl">
+            Certificates
+          </h2>
+
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={15}
+            spaceBetween={1}
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             breakpoints={{
-              640: { slidesPerView: 1.2, spaceBetween: 15 },
-              768: { slidesPerView: 1.5, spaceBetween: 15 },
-              1024: { slidesPerView: 2.1, spaceBetween: 15 }
+              640: { slidesPerView: 1.3, spaceBetween: 1 },
+              768: { slidesPerView: 2, spaceBetween: 1 },
+              1024: { slidesPerView: 3, spaceBetween: 1 },
             }}
-            className="!pb-10"
+            className="!pb-12 certificate-swiper"
           >
             {experiences.map((exp, index) => (
               <SwiperSlide key={index} className="h-auto">
-                <motion.div
-                  className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md overflow-hidden h-full flex flex-col border border-purple-500/10"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4 }}
-                  whileHover={{ y: -2 }}
-                >
-                  {}
-                  <motion.div 
-                    className="relative h-48 w-full overflow-hidden"
-                    initial="hidden"
-                    whileInView="visible"
-                    whileHover="hover"
-                    variants={imageVariants}
-                    viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-                  >
-                    <img 
-                      src={exp.image} 
+                <div className="border border-[hsl(var(--border))] bg-[hsl(var(--background))] h-full flex flex-col">
+                  <div className="relative h-44 w-full overflow-hidden border-b border-[hsl(var(--border))] bg-[hsl(var(--background-light))]">
+                    <img
+                      src={exp.image}
                       alt={exp.imageAlt}
-                      className="w-full h-full object-contain p-2"
+                      className="w-full h-full object-contain p-4 grayscale hover:grayscale-0 transition-all duration-500"
                     />
-                    <motion.div 
-                      className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </motion.div>
-
-                  {}
-                  <div className="p-4 flex-1 flex flex-col">
-                    <div className="flex items-center gap-2 mb-2">
-                      <FiBriefcase className="text-primary dark:text-secondary text-sm" />
-                      <h3 className="text-base font-semibold text-gray-900 dark:text-white">
-                        {exp.role} @ {exp.company}
-                      </h3>
-                    </div>
-
-                    <div className="flex items-center gap-2 mb-3 text-gray-600 dark:text-gray-300 text-xs">
-                      <FiCalendar className="flex-shrink-0" />
-                      <span>{exp.duration}</span>
-                    </div>
-
-                    <ul className="mb-3 space-y-1 text-gray-700 dark:text-gray-300 text-xs flex-1">
-                      {exp.description.map((item, i) => (
-                        <motion.li 
-                          key={i}
-                          className="flex items-start gap-1"
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: 0.1 * i }}
-                        >
-                          <span className="text-primary dark:text-secondary mt-1">•</span>
-                          <span>{item}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
                   </div>
-                </motion.div>
+
+                  <div className="p-5 flex-1 flex flex-col">
+                    <span className="font-anton text-xs text-[hsl(var(--primary))] mb-2">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="text-base font-medium text-[hsl(var(--foreground))] mb-1 leading-snug">
+                      {exp.role}
+                    </h3>
+                    <p className="text-sm text-[hsl(var(--primary))] mb-3">
+                      {exp.company}
+                      {exp.duration && (
+                        <span className="text-[hsl(var(--muted-foreground))]"> · {exp.duration}</span>
+                      )}
+                    </p>
+
+                    <p className="text-xs text-[hsl(var(--muted-foreground))] leading-relaxed line-clamp-4">
+                      {exp.description[0]}
+                    </p>
+                  </div>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { FiBriefcase, FiCalendar } from 'react-icons/fi';
 
 export default function Experience() {
   const experiences = [
@@ -53,70 +52,88 @@ export default function Experience() {
     }
   ];
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  const containerStagger = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.12 } },
+  };
+
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-200">
-      <div className="max-w-5xl mx-auto px-6">
+    <section
+      id="experience"
+      className="relative py-28 bg-[hsl(var(--background))] overflow-hidden"
+    >
+      <div className="absolute top-0 right-0 w-[30vw] h-[30vw] rounded-full bg-[hsl(var(--primary)/0.06)] blur-[100px] pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={containerStagger}
+          className="max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-            Experience
-          </h2>
-          <div className="w-16 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mt-4 rounded-full" />
-        </motion.div>
+          <motion.div variants={fadeInUp} className="flex items-center gap-2 mb-6">
+            <span className="size-2 rounded-full bg-[hsl(var(--primary))]" />
+            <span className="text-sm tracking-widest uppercase text-[hsl(var(--muted-foreground))]">
+              Career
+            </span>
+          </motion.div>
 
-        <div className="relative border-l-2 border-blue-200 dark:border-blue-900 ml-3 md:ml-6">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="relative pl-8 md:pl-10 pb-12 last:pb-0"
-            >
-              {/* Timeline dot */}
-              <span className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-blue-600 dark:bg-blue-400 border-4 border-white dark:border-gray-900" />
+          <motion.h2
+            variants={fadeInUp}
+            className="font-anton uppercase leading-[0.95] text-[hsl(var(--foreground))] text-4xl sm:text-5xl lg:text-6xl mb-16 max-w-3xl"
+          >
+            Where I&apos;ve <span className="text-[hsl(var(--primary))]">worked</span>
+          </motion.h2>
 
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+          <div>
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className="grid md:grid-cols-12 gap-4 md:gap-8 py-10 border-t border-[hsl(var(--border))] first:border-t-0"
+              >
+                <div className="md:col-span-3">
+                  <span className="font-anton text-5xl text-[hsl(var(--border))] leading-none">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-sm text-[hsl(var(--muted-foreground))] mt-3">
+                    {exp.fromDate} — {exp.toDate}
+                  </p>
+                  {exp.type && (
+                    <p className="text-xs uppercase tracking-wide text-[hsl(var(--primary))] mt-1">
+                      {exp.type}
+                    </p>
+                  )}
+                </div>
+
+                <div className="md:col-span-9">
+                  <h3 className="text-xl font-medium text-[hsl(var(--foreground))] mb-1">
                     {exp.role}
                   </h3>
-                  <span className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300">
-                    <FiBriefcase className="w-3 h-3" />
-                    {exp.type}
-                  </span>
+                  <p className="text-[hsl(var(--primary))] mb-5">{exp.company}</p>
+
+                  <ul className="space-y-3">
+                    {exp.description.map((point, i) => (
+                      <li
+                        key={i}
+                        className="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed flex gap-3"
+                      >
+                        <span className="text-[hsl(var(--primary))] mt-0.5 shrink-0">→</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">
-                  {exp.company}
-                </p>
-
-                <div className="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 mb-4">
-                  <FiCalendar className="w-4 h-4" />
-                  <span>{exp.fromDate} — {exp.toDate}</span>
-                </div>
-
-                <ul className="space-y-2">
-                  {exp.description.map((point, i) => (
-                    <li
-                      key={i}
-                      className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex gap-2"
-                    >
-                      <span className="text-blue-500 dark:text-blue-400 mt-1">▸</span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
