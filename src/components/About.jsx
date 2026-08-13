@@ -103,7 +103,7 @@ export default function About() {
                 <span className="text-[hsl(var(--foreground))]">
                   JLK Technology, JPMorgan Chase, Accenture, and Quantium
                 </span>{" "}
-                — solving problems ranging from UI performance
+                - solving problems ranging from UI performance
                 optimization to financial data visualization and
                 data-driven decision making.
               </p>

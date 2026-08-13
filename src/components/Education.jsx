@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 export default function Education() {
   const education = [
     {
-      institution: "Don Bosco College (Co-Ed) — Yelagiri Hills",
+      institution: "Don Bosco College (Co-Ed) - Yelagiri Hills",
       degree: "Bachelor of Computer Applications",
       field: "Computer Science",
       year: "2022 - 2025",
       score: "CGPA 8.77"
     },
     {
-      institution: "St James Higher Secondary School — Trichy",
+      institution: "St James Higher Secondary School - Trichy",
       degree: "HSC",
       field: "Bio-Maths",
       year: "2022",
@@ -86,7 +86,7 @@ export default function Education() {
                       {edu.institution}
                     </h3>
                     <p className="text-sm text-[hsl(var(--primary))]">
-                      {edu.degree} — {edu.field}
+                      {edu.degree} - {edu.field}
                     </p>
                   </div>
 

@@ -54,10 +54,10 @@ export default function Hero() {
             <p className="text-lg max-w-lg mb-10 text-[hsl(var(--muted-foreground))]">
               Hi, I'm{" "}
               <span className="text-[hsl(var(--foreground))] font-medium">
-                Abishek
+                Abi
               </span>
               . Turning ideas into functioning software across the
-              stack — solid backend systems and interfaces people
+              stack - solid backend systems and interfaces people
               actually enjoy using.
             </p>
 

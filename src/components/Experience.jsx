@@ -8,8 +8,8 @@ export default function Experience() {
       fromDate: "Dec 2025",
       toDate: "May 2026",
       description: [
-        "Noticed the app was sluggish on slower devices — traced it to unnecessary re-renders and oversized bundles, then fixed it with lazy loading and memoization, cutting page load time by 30%.",
-        "Inherited a UI with inconsistent rendering across 10+ components — refactored the component structure and enforced consistent patterns, eliminating recurring layout bugs and improving reliability across the application.",
+        "Noticed the app was sluggish on slower devices traced it to unnecessary re-renders and oversized bundles, then fixed it with lazy loading and memoization, cutting page load time by 30%.",
+        "Inherited a UI with inconsistent rendering across 10+ components - refactored the component structure and enforced consistent patterns, eliminating recurring layout bugs and improving reliability across the application.",
         "Identified a recurring frontend-backend data sync issue affecting user flows and built a fix without being asked, resolving 15+ inconsistencies and reducing reported UI bugs to zero across 4 consecutive releases."
       ]
     },
@@ -20,7 +20,7 @@ export default function Experience() {
       fromDate: "Jun 2024",
       toDate: "Aug 2024",
       description: [
-        "Faced inefficient SQL queries causing slow data retrieval — restructured the queries and optimized 5+ Python modules, improving system throughput and database performance by 25-30%.",
+        "Faced inefficient SQL queries causing slow data retrieval - restructured the queries and optimized 5+ Python modules, improving system throughput and database performance by 25-30%.",
         "Tracked down the root cause behind 5+ recurring backend incidents through structured debugging, implementing fixes that cut failure rates by 40% and stabilized application behavior.",
         "Applied clean coding and version control practices throughout, improving code maintainability and reducing review feedback cycles."
       ]
@@ -32,7 +32,7 @@ export default function Experience() {
       fromDate: "Aug 2024",
       toDate: "Oct 2024",
       description: [
-        "Needed to make raw, fast-moving stock market data usable for traders — built interactive dashboards using proprietary frameworks to transform live feeds, significantly improving data visualization clarity.",
+        "Needed to make raw, fast-moving stock market data usable for traders - built interactive dashboards using proprietary frameworks to transform live feeds, significantly improving data visualization clarity.",
         "Processed and structured real-time financial data feeds, turning noisy raw data into accurate, actionable insights for end users.",
         "Designed and implemented UI components for financial applications, enhancing usability and data readability for traders relying on split-second decisions.",
         "Diagnosed data flow and UI issues by analyzing system behavior under simulated production conditions, ensuring dashboards stayed reliable and responsive."
@@ -45,7 +45,7 @@ export default function Experience() {
       fromDate: "Mar 2024",
       toDate: "May 2024",
       description: [
-        "Faced scalability issues in legacy backend services — restructured them using Django and Flask, improving load handling and reducing response latency.",
+        "Faced scalability issues in legacy backend services - restructured them using Django and Flask, improving load handling and reducing response latency.",
         "Delivered 4 application features on schedule with 100% sprint completion, while addressing API failures through structured error handling and fallback mechanisms that reduced failure rates noticeably.",
         "Improved frontend responsiveness across devices, cutting layout inconsistencies and boosting overall usability for end users."
       ]
