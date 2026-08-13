@@ -67,7 +67,7 @@ export default function Header({ darkMode, setDarkMode }) {
               loading="lazy"
             />
             <span className="font-anton uppercase text-lg text-[hsl(var(--foreground))]">
-              Abishek
+              ABI
             </span>
           </Link>
 
