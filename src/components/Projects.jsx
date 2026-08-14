@@ -8,7 +8,7 @@ const projects = [
     "An AI-powered developer platform with two tools: a Repo Explainer that analyzes any public GitHub repository and generates an architecture summary, tech stack breakdown, and system diagram — and an autonomous Issue Solver that reads a GitHub issue, analyzes the actual repo code, generates a targeted fix using LLMs, and opens a real pull request via the GitHub API. Built with deterministic snippet-patching to prevent silent code corruption, GitHub/Google OAuth2 authentication, and engineered entirely on free-tier APIs.",
   tags: ["React.js","Next.js", "TypeScript", "FastAPI", "Groq LLM"],
   image: "/repo-pilot.jpg",
-  githubUrl: "https://github.com/ABISHEK086/RepoPilot",
+  githubUrl: "https://github.com/ABISHEK086/GitHub-Issue-Solver-and-Repository-Explainer",
 },{
   title: "MeetMind – AI Meeting Intelligence Tool",
   description:
