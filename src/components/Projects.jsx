@@ -15,7 +15,7 @@ const projects = [
     "A full-stack AI web application that transcribes meeting audio using Groq Whisper and extracts structured action items, owner assignments, priority levels, and meeting summaries using Groq LLaMA — running entirely on free-tier APIs. Features animated drag-to-reorder action cards, PDF export, shareable summary links, and a fully mobile-responsive UI with swipe gestures. Deployed on Vercel.",
   tags: ["React.js","Next.js" ,"TypeScript", "Groq API", "Tailwind CSS"],
   image: "/meetmind.jpg",
-  githubUrl: "https://github.com/ABISHEK086/Meet-Mind-",
+  githubUrl: "https://meet-mind-silk.vercel.app/",
 },{
   title: "Fault-line - A software supply-chain vulnerability detection tool",
   description:
