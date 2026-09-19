@@ -19,6 +19,7 @@ import {
   SiFastapi,
   SiPostgresql,
   SiAnthropic,
+  SiFigma,
 } from "react-icons/si";
 
 const fadeInUp = {
@@ -36,25 +37,26 @@ const containerStagger = {
 };
 
 export default function About() {
-  const tools = [
-    { name: "Python", icon: <FaPython size={22} /> },
-    { name: "Java", icon: <FaJava size={22} /> },
-    { name: "Django", icon: <SiDjango size={22} /> },
-    { name: "FastAPI", icon: <SiFastapi size={22} /> },
-    { name: "SQL", icon: <SiPostgresql size={22} /> },
-    { name: "MySQL", icon: <SiMysql size={22} /> },
-    { name: "React", icon: <FaReact size={22} /> },
-    { name: "Next.js", icon: <SiNextdotjs size={22} /> },
-    { name: "JavaScript", icon: <FaJs size={22} /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss size={22} /> },
-    { name: "Bootstrap", icon: <FaBootstrap size={22} /> },
-    { name: "HTML5", icon: <FaHtml5 size={22} /> },
-    { name: "CSS3", icon: <FaCss3Alt size={22} /> },
-    { name: "Firebase", icon: <SiFirebase size={22} /> },
-    { name: "WordPress", icon: <FaWordpress size={22} /> },
-    { name: "AWS", icon: <FaAws size={22} /> },
-    { name: "Claude Code", icon: <SiAnthropic size={22} /> },
-  ];
+const tools = [
+  { name: "React", icon: <FaReact size={22} /> },
+  { name: "Next.js", icon: <SiNextdotjs size={22} /> },
+  { name: "JavaScript", icon: <FaJs size={22} /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss size={22} /> },
+  { name: "HTML5", icon: <FaHtml5 size={22} /> },
+  { name: "CSS3", icon: <FaCss3Alt size={22} /> },
+  { name: "Bootstrap", icon: <FaBootstrap size={22} /> },
+  { name: "Figma", icon: <SiFigma size={22} /> },
+  { name: "Claude Code", icon: <SiAnthropic size={22} /> },
+  { name: "Python", icon: <FaPython size={22} /> },
+  { name: "Java", icon: <FaJava size={22} /> },
+  { name: "Django", icon: <SiDjango size={22} /> },
+  { name: "FastAPI", icon: <SiFastapi size={22} /> },
+  { name: "SQL", icon: <SiPostgresql size={22} /> },
+  { name: "MySQL", icon: <SiMysql size={22} /> },
+  { name: "Firebase", icon: <SiFirebase size={22} /> },
+  { name: "WordPress", icon: <FaWordpress size={22} /> },
+  { name: "AWS", icon: <FaAws size={22} /> },
+];
 
   return (
     <section
@@ -71,7 +73,10 @@ export default function About() {
           variants={containerStagger}
           className="max-w-5xl mx-auto"
         >
-          <motion.div variants={fadeInUp} className="flex items-center gap-2 mb-6">
+          <motion.div
+            variants={fadeInUp}
+            className="flex items-center gap-2 mb-6"
+          >
             <span className="size-2 rounded-full bg-[hsl(var(--primary))]" />
             <span className="text-sm tracking-widest uppercase text-[hsl(var(--muted-foreground))]">
               About
@@ -91,32 +96,37 @@ export default function About() {
                 My expertise
               </p>
               <p className="text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
-                I'm a Software Engineer focused on building intelligent,
-                user-centric applications powered by modern web
-                technologies and AI. From frontend performance to backend
-                logic, I enjoy turning complex ideas into scalable, clean,
-                and practical solutions.
+                I'm a Frontend Software Engineer focused on building responsive,
+                performant user interfaces with React and modern web
+                technologies. From translating designs into pixel-accurate
+                components to optimizing load times and debugging across
+                devices, I enjoy turning complex ideas into clean, practical,
+                user-facing products.
               </p>
               <p className="mt-5 text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
-                I've worked across product development and internships
-                with companies like{" "}
+                I've worked across product development and internships with
+                companies like{" "}
                 <span className="text-[hsl(var(--foreground))]">
-                  JLK Technology, JPMorgan Chase, Accenture, and Quantium
+                  JLK Technology, JPMorgan Chase, Accenture, and Kaashiv
+                  InfoTech
                 </span>{" "}
-                - solving problems ranging from UI performance
-                optimization to financial data visualization and
-                data-driven decision making.
+                - solving problems ranging from UI performance optimization to
+                financial data visualization and full-stack feature delivery.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mt-10 pt-8 border-t border-[hsl(var(--border))]">
                 <div>
-                  <p className="font-anton text-3xl text-[hsl(var(--primary))]">4+</p>
+                  <p className="font-anton text-3xl text-[hsl(var(--primary))]">
+                    4+
+                  </p>
                   <p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide mt-1">
                     Internships
                   </p>
                 </div>
                 <div>
-                  <p className="font-anton text-3xl text-[hsl(var(--primary))]">15+</p>
+                  <p className="font-anton text-3xl text-[hsl(var(--primary))]">
+                    15+
+                  </p>
                   <p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide mt-1">
                     Projects built
                   </p>
@@ -137,7 +147,9 @@ export default function About() {
                   <motion.div
                     key={i}
                     variants={fadeInUp}
-                    whileHover={{ backgroundColor: "hsl(var(--background-light))" }}
+                    whileHover={{
+                      backgroundColor: "hsl(var(--background-light))",
+                    }}
                     className="flex flex-col items-center justify-center gap-2 py-6 bg-[hsl(var(--background))] text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors"
                   >
                     {tool.icon}

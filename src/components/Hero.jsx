@@ -19,7 +19,7 @@ export default function Hero() {
 
   const handleDownloadCV = () => {
     window.open(
-      "https://drive.google.com/file/d/1eDC49JInqqNT3BA2oQhmnaMjTb0OTTsl/view?usp=sharing"
+      "https://drive.google.com/file/d/1eDC49JInqqNT3BA2oQhmnaMjTb0OTTsl/view?usp=sharing",
     );
   };
 
@@ -46,9 +46,9 @@ export default function Hero() {
             </div>
 
             <h1 className="font-anton uppercase leading-[0.9] text-[hsl(var(--foreground))] text-6xl sm:text-7xl lg:text-8xl mb-6">
-              Software
+              Software Engineer
               <br />
-              <span className="text-[hsl(var(--primary))]">Developer</span>
+              <span className="text-[hsl(var(--primary))]">Frontend</span>
             </h1>
 
             <p className="text-lg max-w-lg mb-10 text-[hsl(var(--muted-foreground))]">
@@ -56,9 +56,8 @@ export default function Hero() {
               <span className="text-[hsl(var(--foreground))] font-medium">
                 Abi
               </span>
-              . Turning ideas into functioning software across the
-              stack - solid backend systems and interfaces people
-              actually enjoy using.
+              . Turning designs into fast, polished, user-facing interfaces -
+              React apps people actually enjoy using.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">
@@ -90,9 +89,21 @@ export default function Hero() {
 
             <div className="flex gap-5">
               {[
-                { icon: <FiGithub />, url: "https://github.com/ABISHEK086", name: "GitHub" },
-                { icon: <FiLinkedin />, url: "https://www.linkedin.com/in/abishek-antony-a86673ap", name: "LinkedIn" },
-                { icon: <FiTwitter />, url: "https://x.com/Abishek098210", name: "Twitter" },
+                {
+                  icon: <FiGithub />,
+                  url: "https://github.com/ABISHEK086",
+                  name: "GitHub",
+                },
+                {
+                  icon: <FiLinkedin />,
+                  url: "https://www.linkedin.com/in/abishek-antony-a86673ap",
+                  name: "LinkedIn",
+                },
+                {
+                  icon: <FiTwitter />,
+                  url: "https://x.com/Abishek098210",
+                  name: "Twitter",
+                },
               ].map((social, i) => (
                 <motion.a
                   key={i}
@@ -130,7 +141,9 @@ export default function Hero() {
               <span className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-[hsl(var(--primary))]" />
 
               <div className="absolute -bottom-6 -left-6 bg-[hsl(var(--background-light))] border border-[hsl(var(--border))] px-4 py-3">
-                <p className="font-anton text-2xl text-[hsl(var(--primary))]">4+</p>
+                <p className="font-anton text-2xl text-[hsl(var(--primary))]">
+                  4+
+                </p>
                 <p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide">
                   Internships
                 </p>
