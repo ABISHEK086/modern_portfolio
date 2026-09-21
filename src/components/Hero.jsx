@@ -19,7 +19,7 @@ export default function Hero() {
 
   const handleDownloadCV = () => {
     window.open(
-      "https://drive.google.com/file/d/1R-mQ_XD_0llqm3WPRyjBUFYmqx0QGYVL/view?usp=sharing",
+      "https://drive.google.com/file/d/18KzrhJEmuPzRMenws0CpihgCOGN9-elb/view?usp=sharing",
     );
   };
 
